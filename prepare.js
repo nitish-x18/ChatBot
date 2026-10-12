@@ -16,7 +16,7 @@ const pinecone = new Pinecone({
 const indexName = "rbu-chatbot-index";
 const index = pinecone.Index(indexName);
 
-const vectorStore = await PineconeStore.fromExistingIndex(
+export const vectorStore = await PineconeStore.fromExistingIndex(
   embeddings,
   { pineconeIndex: index }
 );
